@@ -19,21 +19,7 @@ namespace KataAPI.Controllers
         }
     }
 
-    [Route("api/[controller]")]
-    [ApiController]
-    public class EchoNumberController : ControllerBase
-    {
-        [HttpGet]
-        public IActionResult Get(string number)
-        {
-            if (number == null || !int.TryParse(number, out int item))
-            {
-                return Ok("Please ensure to enter a valid integer!");
-            }
-
-            return Ok($"{number}");
-        }
-    }
+    
 
    
 }
